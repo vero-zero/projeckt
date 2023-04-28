@@ -1,0 +1,23 @@
+<form action="/main/" method="post"
+    enctype="multipart/form-data">
+<body>
+    <main>
+        who are you ? 
+    </main>
+    <span>
+        <input type="text" name="user" placeholder ="이름을 입력하세요">
+    </span>
+        {% if msg %}
+        <div class="alert alert-danger" role="alert">{{ msg }}</div>
+        {% endif %} 
+        {% if error_msg %}
+        <div class="alert alert-danger" role="alert">{{ error_msg }}</div>
+        <divclass >
+            
+            {% endif %} 
+            <button id ="ok" >중복확인</button>
+            {% csrf_token %}
+            <button type="button" id="strat" onclick="location.href='main/gameing/'">Game Strat</button> 
+        </div>
+</body>
+</form>
